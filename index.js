@@ -39,7 +39,7 @@ function trazerInformacoesFiltradas(){
 }
 
 async function getNoticias() {
-    const dados = await fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/${location.search}`);
+    const dados = await fetch(`http://servicodados.ibge.gov.br/api/v3/noticias/${window.location.search}`);
     return await dados.json();
 }
 
