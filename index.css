@@ -239,7 +239,7 @@ li{
     color: #f0f0f0;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     #dialog-filtro{
         height: 450px;
         width: 80vw;
