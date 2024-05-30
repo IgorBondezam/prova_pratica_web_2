@@ -224,7 +224,7 @@ function criarPagina(index){
     return `
         <li>
             <button 
-                class="${isAtiva ? 'pagina-ativa' : 'pagina'} width100" 
+                class="${isAtiva ? 'pagina-ativa' : 'pagina'} width100 pointer" 
                 type="button" 
                 onclick="changePage(this)">${index}</button>
         </li>

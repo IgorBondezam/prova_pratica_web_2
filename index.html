@@ -31,51 +31,51 @@
                 <div id="circulo-filtro" class="flex center-all"></div>
             </div>
         </div>
-        <dialog id="dialog-filtro">
-            <div id="cabecalho-dialog">
-                <span id="close-dialog">&#x2715;</span>
-            </div>
-            <form onsubmit="aplicarFiltro(event)">
-                <div class="flex-column">
-                    <label for="filtro-tipo">Tipo:</label>
-                    <select class="input-dialog" id="filtro-tipo">
-                        <option value="">Selecione um tipo</option>
-                        <option value="noticia">Notícia</option>
-                        <option value="release">Release</option>
-                    </select>
-                </div>
-                <div class="flex-column">
-                    <label for="filtro-quantidade">Quantidade:</label>
-                    <select class="input-dialog" id="filtro-quantidade">
-                        <option value="5">05</option>
-                        <option selected value="10">10</option>
-                        <option value="15">15</option>
-                        <option value="20">20</option>
-                    </select>
-                </div>
-                <div class="flex-column">
-                    <label for="filtro-de">De:</label>
-                    <input class="input-dialog" type="date" id="filtro-de">
-                </div>
-                <div class="flex-column">
-                    <label for="filtro-ate">Até:</label>
-                    <input class="input-dialog" type="date" id="filtro-ate">
-                </div>
-                <button type="submit" class="texto-branco" id="botao-filtro">Aplicar</button>
-            </form>
-        </dialog>
     </div>
 </header>
 
 <main class="center-column">
     <ul id="conteudo-principal" class="width100"></ul>
-    <ul id="paginacao" class="flex center-row gap-8">
-    </ul>
+    <ul id="paginacao" class="flex center-row gap-8"></ul>
 </main>
 
 <footer class="center-all texto-branco">
     <span>&copy 2024 Prova de Programação Web</span>
 </footer>
+
+<dialog id="dialog-filtro">
+    <div id="cabecalho-dialog">
+        <span id="close-dialog">&#x2715;</span>
+    </div>
+    <form onsubmit="aplicarFiltro(event)">
+        <div class="flex-column">
+            <label for="filtro-tipo">Tipo:</label>
+            <select class="input-dialog" id="filtro-tipo">
+                <option value="">Selecione um tipo</option>
+                <option value="noticia">Notícia</option>
+                <option value="release">Release</option>
+            </select>
+        </div>
+        <div class="flex-column">
+            <label for="filtro-quantidade">Quantidade:</label>
+            <select class="input-dialog" id="filtro-quantidade">
+                <option value="5">05</option>
+                <option selected value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div class="flex-column">
+            <label for="filtro-de">De:</label>
+            <input class="input-dialog" type="date" id="filtro-de">
+        </div>
+        <div class="flex-column">
+            <label for="filtro-ate">Até:</label>
+            <input class="input-dialog" type="date" id="filtro-ate">
+        </div>
+        <button type="submit" class="texto-branco" id="botao-filtro">Aplicar</button>
+    </form>
+</dialog>
 </body>
 <script src="index.js"></script>
 </html>

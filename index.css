@@ -117,6 +117,10 @@ li{
     height: 10vh;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 .relative{
     position: relative;
 }
