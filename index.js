@@ -123,7 +123,6 @@ function createCard(noticia){
     titulo.textContent = noticia.titulo;
     paragrafo.textContent = noticia.introducao;
     editorias.textContent = getEditorias(noticia.editorias);
-    console.log(noticia)
     publicado.textContent = getPublicado(noticia.data_publicacao);
 
     divTexto.setAttribute('id', 'texto-listagem');
