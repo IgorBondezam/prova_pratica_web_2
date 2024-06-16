@@ -123,6 +123,7 @@ function createCard(noticia){
     titulo.textContent = noticia.titulo;
     paragrafo.textContent = noticia.introducao;
     editorias.textContent = getEditorias(noticia.editorias);
+    console.log(noticia)
     publicado.textContent = getPublicado(noticia.data_publicacao);
 
     divTexto.setAttribute('id', 'texto-listagem');
@@ -162,7 +163,8 @@ function getEditorias(editorias){
 }
 
 function getPublicado(dateString){
-    const date = getFormatDate(dateString);
+    // const date = getFormatDate(dateString);
+    const date = new Date(dateString);
     const dateHoje = new Date();
     diferencaDatasEmDia = Math.round((dateHoje - date) / 24 / 60 / 60 / 1000);
     if(diferencaDatasEmDia === 0){
@@ -174,15 +176,15 @@ function getPublicado(dateString){
     return `Publicado há ${diferencaDatasEmDia} dias`;
 }
 
-function getFormatDate(dateString) {
-    const dateStringArray = dateString.split(' ');
-    const onlyDate = dateStringArray[0].split('/');
-    const day = onlyDate[0];
-    const month = onlyDate[1];
-    const year = onlyDate[2];
-
-    return new Date(`${year}-${month}-${day}T${dateStringArray[1]}Z`);
-}
+// function getFormatDate(dateString) {
+//     const dateStringArray = dateString.split(' ');
+//     const onlyDate = dateStringArray[0].split('/');
+//     const day = onlyDate[0];
+//     const month = onlyDate[1];
+//     const year = onlyDate[2];
+//     console.log(dateString)
+//     return new Date(`${year}-${month}-${day}T${dateStringArray[1]}Z`);
+// }
 
 function criarElementoHTML(element){
     return document.createElement(element);
